@@ -1,0 +1,15 @@
+services:
+  db:
+    image: postgres:16
+    container_name: bettracker_db
+    environment:
+      POSTGRES_DB: bettracker
+      POSTGRES_USER: bettracker_user
+      POSTGRES_PASSWORD: bettracker_pass
+    ports:
+      - "5432:5432"
+    volumes:
+      - bettracker_pgdata:/var/lib/postgresql/data
+
+volumes:
+  bettracker_pgdata:
