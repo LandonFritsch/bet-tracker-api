@@ -56,7 +56,7 @@ public class Bet {
 
     @NotNull
     @Column(nullable = false, updatable = false)
-    private OffsetDateTime placedAt = OffsetDateTime.now();
+    private OffsetDateTime placedAt;
 
     // ---- Getters & Setters ----
 
